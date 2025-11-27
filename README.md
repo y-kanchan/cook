@@ -58,3 +58,4 @@ src/
 
 - This is a frontend-only app. No network calls are required.
 - Tailwind warnings in editors are normal until PostCSS runs via Vite.
+- 
