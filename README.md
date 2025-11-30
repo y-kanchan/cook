@@ -9,6 +9,12 @@ It simulates a real full-stack app using **LocalStorage** and a custom **Fake AP
 
 **Live Demo**: (https://cook-eveg8athi-kanchanyadav0916-gmailcoms-projects.vercel.app/)
 
+### Video Walkthrough & Code Explanation
+
+Watch the project explanation + live demo here: 
+
+[Watch Full Video → [CookBook – Code Walkthrough](https://drive.google.com/file/d/1NKXN4SYluBV5jCOG1R5wQqWdFFiEiHQm/view?usp=sharing)
+
 ---
 
 ### Demo Login (Instant Access)
@@ -144,10 +150,6 @@ cb_seeded     → Boolean flag to prevent re-seeding sample data
 |--------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
 |<br>![Recipe Detail 2](https://github.com/user-attachments/assets/fa9df22d-1e12-422f-8c0a-d0b70c090399) | ![Add Recipe](https://github.com/user-attachments/assets/fd5913a8-2fa8-45d2-b602-7fe2e38d09f6) |
 
-### Video Walkthrough & Code Explanation
-
-Watch the project explanation + live demo here:  
-[Watch Full Video → [CookBook – Code Walkthrough](https://drive.google.com/file/d/1NKXN4SYluBV5jCOG1R5wQqWdFFiEiHQm/view?usp=sharing)
 
 ### Future Enhancements
 
