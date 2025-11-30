@@ -7,7 +7,7 @@ It simulates a real full-stack app using **LocalStorage** and a custom **Fake AP
 ![Vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)
 ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
-**Live Demo**: [(https://cook-eveg8athi-kanchanyadav0916-gmailcoms-projects.vercel.app/)]
+**Live Demo**: (https://cook-eveg8athi-kanchanyadav0916-gmailcoms-projects.vercel.app/)
 
 ---
 
@@ -143,6 +143,12 @@ cb_seeded     → Boolean flag to prevent re-seeding sample data
 | Recipe Details                                                                                   | Add Recipe                                                                          |
 |--------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
 |<br>![Recipe Detail 2](https://github.com/user-attachments/assets/fa9df22d-1e12-422f-8c0a-d0b70c090399) | ![Add Recipe](https://github.com/user-attachments/assets/fd5913a8-2fa8-45d2-b602-7fe2e38d09f6) |
+
+### Video Walkthrough & Code Explanation
+
+Watch the project explanation + live demo here:  
+[Watch Full Video → [CookBook – Code Walkthrough](https://drive.google.com/file/d/1NKXN4SYluBV5jCOG1R5wQqWdFFiEiHQm/view?usp=sharing)
+
 ### Future Enhancements
 
 - Real backend with Node.js/Express + MongoDB (or Firebase)
