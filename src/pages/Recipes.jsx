@@ -1,14 +1,24 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import RecipeGrid from '../components/recipes/RecipeGrid'
 import RecipeFilters from '../components/recipes/RecipeFilters'
 import { useRecipes } from '../context/RecipesContext'
 import Loader from '../components/ui/Loader'
 
-export default function Recipes(){
+export default function Recipes() {
   const { recipes, loading, refresh } = useRecipes()
   const [q, setQ] = useState('')
-  const [filters, setFilters] = useState({ cuisine:'', category:'', difficulty:'' })
-  async function apply(){ await refresh({ q, ...filters }) }
+  const [filters, setFilters] = useState({ cuisine: '', category: '', difficulty: '' })
+  const mounted = useRef(false)
+
+  async function apply() { await refresh({ q, ...filters }) }
+
+  useEffect(() => {
+    if (mounted.current) {
+      apply()
+    } else {
+      mounted.current = true
+    }
+  }, [filters])
   return (
     <div className="space-y-6">
       <h1 className="text-xl font-semibold">All Recipes</h1>

@@ -11,7 +11,6 @@ export default function Navbar(){
           <NavLink to="/recipes" className={({isActive})=> isActive? 'text-primary-700 font-medium' : 'text-gray-600'}>All Recipes</NavLink>
           {user && (
             <>
-              <NavLink to="/my-cookbook" className={({isActive})=> isActive? 'text-primary-700 font-medium' : 'text-gray-600'}>My Cookbook</NavLink>
               <NavLink to="/my-recipes" className={({isActive})=> isActive? 'text-primary-700 font-medium' : 'text-gray-600'}>My Recipes</NavLink>
               <NavLink to="/add" className={({isActive})=> isActive? 'text-primary-700 font-medium' : 'text-gray-600'}>Add Recipe</NavLink>
             </>
