@@ -5,6 +5,7 @@ import Button from '../components/ui/Button'
 import Select from '../components/ui/Select'
 import { useRecipes } from '../context/RecipesContext'
 import { useNavigate } from 'react-router-dom'
+import { toast } from 'react-hot-toast'
 
 const cuisines = ['Italian', 'Indian', 'Mexican', 'Chinese', 'American', 'Thai', 'French']
 const categories = ['Breakfast', 'Lunch', 'Dinner', 'Dessert', 'Snack']
@@ -18,7 +19,7 @@ export default function AddRecipe() {
   const [step, setStep] = useState('')
   function addIngredient() { if (!ingredient.name) return; setForm(f => ({ ...f, ingredients: [...f.ingredients, ingredient] })); setIngredient({ name: '', quantity: '' }) }
   function addStep() { if (!step) return; setForm(f => ({ ...f, steps: [...f.steps, step] })); setStep('') }
-  async function submit(e) { e.preventDefault(); const r = await create(form); nav(`/recipes/${r.id}`) }
+  async function submit(e) { e.preventDefault(); const r = await create(form); toast.success('Recipe created'); nav(`/recipes/${r.id}`) }
   return (
     <div className="mx-auto max-w-2xl">
       <h1 className="mb-4 text-xl font-semibold">Add Recipe</h1>

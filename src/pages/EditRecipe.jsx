@@ -5,6 +5,7 @@ import TextArea from '../components/ui/TextArea'
 import Button from '../components/ui/Button'
 import { api } from '../utils/api'
 import { useRecipes } from '../context/RecipesContext'
+import { toast } from 'react-hot-toast'
 
 export default function EditRecipe() {
   const { id } = useParams()
@@ -13,9 +14,19 @@ export default function EditRecipe() {
   const [form, setForm] = useState(null)
   useEffect(() => { api.getRecipe(id).then(setForm) }, [id])
   if (!form) return <div className="py-12 text-center text-sm text-gray-500">Loading...</div>
-  function addIngredient() { setForm(f => ({ ...f, ingredients: [...f.ingredients, { name: '', quantity: '' }] })) }
-  function addStep() { setForm(f => ({ ...f, steps: [...f.steps, ''] })) }
-  async function submit(e) { e.preventDefault(); await update(id, form); nav(`/recipes/${id}`) }
+  function addIngredient(){ setForm(f=>({...f, ingredients:[...f.ingredients, { name:'', quantity:'' }]})) }
+  function addStep(){ setForm(f=>({...f, steps:[...f.steps, '' ]})) }
+  async function submit(e){
+    e.preventDefault()
+    try{
+      await toast.promise(update(id, form), {
+        loading: 'Saving...',
+        success: 'Recipe saved',
+        error: 'Failed to save',
+      })
+      nav(`/recipes/${id}`)
+    } catch(err){ /* error toast already shown */ }
+  }
   return (
     <div className="mx-auto max-w-2xl">
       <h1 className="mb-4 text-xl font-semibold">Edit Recipe</h1>
