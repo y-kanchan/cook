@@ -6,7 +6,12 @@ export default function RecipeCard({ recipe }){
   const { favorite } = useRecipes()
   return (
     <div className="overflow-hidden rounded-lg border bg-white">
-      <img src={recipe.imageUrl} alt={recipe.title} className="h-40 w-full object-cover" />
+      <img 
+        src={recipe.imageUrl} 
+        alt={recipe.title} 
+        className="h-40 w-full object-cover" 
+        loading="lazy"
+      />
       <div className="space-y-2 p-4">
         <h3 className="line-clamp-1 font-semibold">{recipe.title}</h3>
         <p className="line-clamp-2 text-sm text-gray-600">{recipe.description}</p>
