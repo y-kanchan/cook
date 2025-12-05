@@ -4,6 +4,7 @@ import { api } from '../utils/fakeApi'
 import { useAuth } from '../context/AuthContext'
 import { useRecipes } from '../context/RecipesContext'
 import Button from '../components/ui/Button'
+import { toast } from 'react-hot-toast'
 
 export default function RecipeDetails(){
   const { id } = useParams()
@@ -25,7 +26,16 @@ export default function RecipeDetails(){
           <div className="mt-2 text-sm text-gray-500">{r.cuisine} • {r.category} • {r.difficulty}</div>
         </div>
         <div className="flex gap-2">
-          <Button variant="secondary" onClick={()=>favorite(r.id)}>Save</Button>
+          <Button
+            variant="secondary"
+            onClick={async ()=>{
+              if (!user) { toast.error('Please login to save recipes'); return }
+              const saved = await favorite(r.id)
+              toast.success(saved ? 'Saved to your cookbook' : 'Removed from your cookbook')
+            }}
+          >
+            Save
+          </Button>
           {user && user.id === r.createdBy && (
             <>
               <Button variant="secondary" onClick={()=>navigate(`/edit/${r.id}`)}>Edit</Button>
