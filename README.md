@@ -1,7 +1,7 @@
-# CookBook – Your Virtual Kitchen Assistant 
+# CookBook - Your Virtual Kitchen Assistant 
 
 **CookBook** is a fully-featured frontend recipe application built with **React + Vite**.  
-It simulates a real full-stack app using **LocalStorage** and a custom **Fake API layer**, allowing full **CRUD operations** on recipes, **user authentication**, **favorites**, **advanced filtering**, and a beautiful responsive UI — **all without a real backend**.
+It simulates a real full-stack app using **LocalStorage** and a custom **Fake API layer**, allowing full **CRUD operations** on recipes, **user authentication**, **favorites**, **advanced filtering**, and a beautiful responsive UI **all without a real backend**.
 
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)
@@ -13,7 +13,8 @@ It simulates a real full-stack app using **LocalStorage** and a custom **Fake AP
 
 Watch the project explanation + live demo here: 
 
-[Watch Full Video → [CookBook – Code Walkthrough](https://drive.google.com/file/d/1NKXN4SYluBV5jCOG1R5wQqWdFFiEiHQm/view?usp=sharing)
+[Watch Full Video → [CookBook - Demo](https://drive.google.com/file/d/1nfgj2CfvSg8vuYLflhmvNsKMXQJqf958/view?usp=sharing) /
+                    [Code Walkthrough](https://drive.google.com/file/d/1NKXN4SYluBV5jCOG1R5wQqWdFFiEiHQm/view?usp=sharing)
 
 ---
 

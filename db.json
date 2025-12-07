@@ -1,0 +1,631 @@
+{
+  "recipes": [
+    {
+      "id": "r_spaghetti_bolognese",
+      "title": "Spaghetti Bolognese",
+      "description": "A classic Italian pasta with rich meat sauce.",
+      "imageUrl": "https://tse4.mm.bing.net/th/id/OIP.idN4eLHRcVq1yk8_AkJcoAHaHa?rs=1&pid=ImgDetMain&o=7&rm=3",
+      "cuisine": "Italian",
+      "category": "Dinner",
+      "difficulty": "Easy",
+      "prepTime": 15,
+      "cookTime": 45,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "Spaghetti",
+          "quantity": "400g"
+        },
+        {
+          "name": "Ground beef",
+          "quantity": "500g"
+        },
+        {
+          "name": "Tomato sauce",
+          "quantity": "2 cups"
+        },
+        {
+          "name": "Onion",
+          "quantity": "1, diced"
+        },
+        {
+          "name": "Garlic",
+          "quantity": "3 cloves"
+        }
+      ],
+      "steps": [
+        "Cook spaghetti until al dente.",
+        "Sauté onion and garlic, add beef and brown.",
+        "Add tomato sauce, simmer 20-30 mins.",
+        "Serve sauce over pasta."
+      ],
+      "createdBy": "u_demo",
+      "createdAt": "2024-06-01T10:00:00.000Z"
+    },
+    {
+      "id": "r_pancakes",
+      "title": "Fluffy Pancakes",
+      "description": "Quick, fluffy pancakes perfect for breakfast.",
+      "imageUrl": "https://topteenrecipes.com/wp-content/uploads/2023/08/Fluffy-Greek-Yogurt-Pancakes5-720x1080-1.jpg",
+      "cuisine": "American",
+      "category": "Breakfast",
+      "difficulty": "Easy",
+      "prepTime": 10,
+      "cookTime": 15,
+      "servings": 3,
+      "ingredients": [
+        {
+          "name": "Flour",
+          "quantity": "1 cup"
+        },
+        {
+          "name": "Milk",
+          "quantity": "1 cup"
+        },
+        {
+          "name": "Egg",
+          "quantity": "1"
+        },
+        {
+          "name": "Baking powder",
+          "quantity": "2 tsp"
+        },
+        {
+          "name": "Sugar",
+          "quantity": "2 tbsp"
+        }
+      ],
+      "steps": [
+        "Combine dry ingredients.",
+        "Whisk in milk and egg.",
+        "Cook on greased pan until bubbles form, flip and cook."
+      ],
+      "createdBy": "u_demo",
+      "createdAt": "2024-05-12T09:00:00.000Z"
+    },
+    {
+      "id": "r_chicken_curry",
+      "title": "Chicken Curry",
+      "description": "A flavorful Indian chicken curry.",
+      "imageUrl": "https://www.funfoodfrolic.com/wp-content/uploads/2020/09/Chicken-Curry-Thumbnail.jpg",
+      "cuisine": "Indian",
+      "category": "Dinner",
+      "difficulty": "Medium",
+      "prepTime": 20,
+      "cookTime": 35,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "Chicken",
+          "quantity": "600g"
+        },
+        {
+          "name": "Onion",
+          "quantity": "2, sliced"
+        },
+        {
+          "name": "Tomato",
+          "quantity": "2, chopped"
+        },
+        {
+          "name": "Curry powder",
+          "quantity": "2 tbsp"
+        },
+        {
+          "name": "Garlic & Ginger",
+          "quantity": "1 tbsp each"
+        }
+      ],
+      "steps": [
+        "Sauté onions, garlic, and ginger.",
+        "Add chicken and brown.",
+        "Add tomatoes and curry powder, simmer until cooked."
+      ],
+      "createdBy": "u_demo",
+      "createdAt": "2024-04-20T12:00:00.000Z"
+    },
+    {
+      "id": "r_tacos_al_pastor",
+      "title": "Tacos al Pastor",
+      "description": "Traditional Mexican tacos with marinated pork and pineapple.",
+      "imageUrl": "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=800&q=80",
+      "cuisine": "Mexican",
+      "category": "Dinner",
+      "difficulty": "Medium",
+      "prepTime": 30,
+      "cookTime": 25,
+      "servings": 6,
+      "ingredients": [
+        {
+          "name": "Pork shoulder",
+          "quantity": "800g, thinly sliced"
+        },
+        {
+          "name": "Pineapple",
+          "quantity": "1 cup, diced"
+        },
+        {
+          "name": "Dried chilies",
+          "quantity": "3"
+        },
+        {
+          "name": "Corn tortillas",
+          "quantity": "12"
+        },
+        {
+          "name": "Cilantro and onion",
+          "quantity": "For garnish"
+        }
+      ],
+      "steps": [
+        "Marinate pork in chili paste for 2 hours.",
+        "Grill pork with pineapple until charred.",
+        "Chop meat and pineapple, serve in warm tortillas.",
+        "Top with cilantro, onion, and lime."
+      ],
+      "createdBy": "u_demo",
+      "createdAt": "2024-05-28T14:30:00.000Z"
+    },
+    {
+      "id": "r_pad_thai",
+      "title": "Pad Thai",
+      "description": "Classic Thai stir-fried noodles with shrimp and peanuts.",
+      "imageUrl": "https://images.unsplash.com/photo-1559314809-0d155014e29e?w=800&q=80",
+      "cuisine": "Thai",
+      "category": "Lunch",
+      "difficulty": "Medium",
+      "prepTime": 20,
+      "cookTime": 15,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "Rice noodles",
+          "quantity": "300g"
+        },
+        {
+          "name": "Shrimp",
+          "quantity": "300g"
+        },
+        {
+          "name": "Tamarind paste",
+          "quantity": "3 tbsp"
+        },
+        {
+          "name": "Fish sauce",
+          "quantity": "2 tbsp"
+        },
+        {
+          "name": "Peanuts",
+          "quantity": "1/2 cup, crushed"
+        },
+        {
+          "name": "Bean sprouts",
+          "quantity": "1 cup"
+        }
+      ],
+      "steps": [
+        "Soak rice noodles in warm water for 30 minutes.",
+        "Stir-fry shrimp until pink, set aside.",
+        "Cook noodles with tamarind and fish sauce.",
+        "Add shrimp, bean sprouts, and peanuts. Toss and serve."
+      ],
+      "createdBy": "u_demo",
+      "createdAt": "2024-05-15T11:20:00.000Z"
+    },
+    {
+      "id": "r_sushi_rolls",
+      "title": "California Sushi Rolls",
+      "description": "Fresh sushi rolls with crab, avocado, and cucumber.",
+      "imageUrl": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=800&q=80",
+      "cuisine": "Japanese",
+      "category": "Lunch",
+      "difficulty": "Hard",
+      "prepTime": 40,
+      "cookTime": 20,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "Sushi rice",
+          "quantity": "2 cups"
+        },
+        {
+          "name": "Nori sheets",
+          "quantity": "4"
+        },
+        {
+          "name": "Imitation crab",
+          "quantity": "200g"
+        },
+        {
+          "name": "Avocado",
+          "quantity": "1, sliced"
+        },
+        {
+          "name": "Cucumber",
+          "quantity": "1, julienned"
+        },
+        {
+          "name": "Rice vinegar",
+          "quantity": "3 tbsp"
+        }
+      ],
+      "steps": [
+        "Cook sushi rice and season with rice vinegar.",
+        "Place nori on bamboo mat, spread rice evenly.",
+        "Add crab, avocado, and cucumber in a line.",
+        "Roll tightly using the mat, slice into pieces."
+      ],
+      "createdBy": "u_demo",
+      "createdAt": "2024-05-05T13:45:00.000Z"
+    },
+    {
+      "id": "r_greek_salad",
+      "title": "Greek Salad",
+      "description": "Fresh Mediterranean salad with feta and olives.",
+      "imageUrl": "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=800&q=80",
+      "cuisine": "Mediterranean",
+      "category": "Lunch",
+      "difficulty": "Easy",
+      "prepTime": 15,
+      "cookTime": 0,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "Cucumber",
+          "quantity": "2, diced"
+        },
+        {
+          "name": "Tomatoes",
+          "quantity": "4, chopped"
+        },
+        {
+          "name": "Feta cheese",
+          "quantity": "200g, cubed"
+        },
+        {
+          "name": "Kalamata olives",
+          "quantity": "1 cup"
+        },
+        {
+          "name": "Olive oil",
+          "quantity": "1/4 cup"
+        },
+        {
+          "name": "Red onion",
+          "quantity": "1/2, sliced"
+        }
+      ],
+      "steps": [
+        "Combine cucumber, tomatoes, onion, and olives in a bowl.",
+        "Add feta cheese on top.",
+        "Drizzle with olive oil and lemon juice.",
+        "Season with oregano, salt, and pepper."
+      ],
+      "createdBy": "u_demo",
+      "createdAt": "2024-05-22T12:00:00.000Z"
+    },
+    {
+      "id": "r_chocolate_cake",
+      "title": "Chocolate Lava Cake",
+      "description": "Decadent chocolate cake with a molten center.",
+      "imageUrl": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=800&q=80",
+      "cuisine": "French",
+      "category": "Dessert",
+      "difficulty": "Medium",
+      "prepTime": 15,
+      "cookTime": 12,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "Dark chocolate",
+          "quantity": "200g"
+        },
+        {
+          "name": "Butter",
+          "quantity": "100g"
+        },
+        {
+          "name": "Eggs",
+          "quantity": "2"
+        },
+        {
+          "name": "Sugar",
+          "quantity": "1/2 cup"
+        },
+        {
+          "name": "Flour",
+          "quantity": "1/4 cup"
+        }
+      ],
+      "steps": [
+        "Melt chocolate and butter together.",
+        "Whisk eggs and sugar until fluffy.",
+        "Fold in chocolate mixture and flour.",
+        "Pour into greased ramekins, bake at 425°F for 12 minutes."
+      ],
+      "createdBy": "u_demo",
+      "createdAt": "2024-05-18T16:00:00.000Z"
+    },
+    {
+      "id": "r_fried_rice",
+      "title": "Vegetable Fried Rice",
+      "description": "Quick and easy Chinese-style fried rice with vegetables.",
+      "imageUrl": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=800&q=80",
+      "cuisine": "Chinese",
+      "category": "Dinner",
+      "difficulty": "Easy",
+      "prepTime": 10,
+      "cookTime": 15,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "Cooked rice",
+          "quantity": "4 cups, day-old"
+        },
+        {
+          "name": "Mixed vegetables",
+          "quantity": "2 cups"
+        },
+        {
+          "name": "Eggs",
+          "quantity": "2"
+        },
+        {
+          "name": "Soy sauce",
+          "quantity": "3 tbsp"
+        },
+        {
+          "name": "Garlic",
+          "quantity": "3 cloves, minced"
+        },
+        {
+          "name": "Green onions",
+          "quantity": "3, chopped"
+        }
+      ],
+      "steps": [
+        "Scramble eggs in a wok, set aside.",
+        "Stir-fry garlic and vegetables until tender.",
+        "Add rice and soy sauce, toss well.",
+        "Mix in eggs and green onions, serve hot."
+      ],
+      "createdBy": "u_demo",
+      "createdAt": "2024-05-10T18:30:00.000Z"
+    },
+    {
+      "id": "r_french_toast",
+      "title": "Classic French Toast",
+      "description": "Golden, crispy French toast perfect for weekend brunch.",
+      "imageUrl": "https://images.unsplash.com/photo-1484723091739-30a097e8f929?w=800&q=80",
+      "cuisine": "French",
+      "category": "Breakfast",
+      "difficulty": "Easy",
+      "prepTime": 5,
+      "cookTime": 10,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "Bread slices",
+          "quantity": "8 thick slices"
+        },
+        {
+          "name": "Eggs",
+          "quantity": "4"
+        },
+        {
+          "name": "Milk",
+          "quantity": "1/2 cup"
+        },
+        {
+          "name": "Cinnamon",
+          "quantity": "1 tsp"
+        },
+        {
+          "name": "Vanilla extract",
+          "quantity": "1 tsp"
+        },
+        {
+          "name": "Butter",
+          "quantity": "For cooking"
+        }
+      ],
+      "steps": [
+        "Whisk eggs, milk, cinnamon, and vanilla.",
+        "Dip bread slices in egg mixture.",
+        "Cook on buttered griddle until golden on both sides.",
+        "Serve with maple syrup and fresh berries."
+      ],
+      "createdBy": "u_demo",
+      "createdAt": "2024-05-25T08:00:00.000Z"
+    },
+    {
+      "id": "r_biryani",
+      "title": "Chicken Biryani",
+      "description": "Aromatic Indian rice dish with spiced chicken and fragrant basmati.",
+      "imageUrl": "https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=800&q=80",
+      "cuisine": "Indian",
+      "category": "Dinner",
+      "difficulty": "Hard",
+      "prepTime": 45,
+      "cookTime": 60,
+      "servings": 6,
+      "ingredients": [
+        {
+          "name": "Basmati rice",
+          "quantity": "2 cups"
+        },
+        {
+          "name": "Chicken",
+          "quantity": "800g"
+        },
+        {
+          "name": "Yogurt",
+          "quantity": "1 cup"
+        },
+        {
+          "name": "Biryani masala",
+          "quantity": "3 tbsp"
+        },
+        {
+          "name": "Saffron",
+          "quantity": "A pinch"
+        },
+        {
+          "name": "Fried onions",
+          "quantity": "1 cup"
+        }
+      ],
+      "steps": [
+        "Marinate chicken in yogurt and spices for 2 hours.",
+        "Parboil rice with whole spices.",
+        "Layer marinated chicken and rice in a pot.",
+        "Cook on low heat (dum) for 45 minutes until done."
+      ],
+      "createdBy": "u_demo",
+      "createdAt": "2024-04-15T17:00:00.000Z"
+    },
+    {
+      "id": "r_margherita_pizza",
+      "title": "Margherita Pizza",
+      "description": "Classic Italian pizza with fresh mozzarella, tomatoes, and basil.",
+      "imageUrl": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=800&q=80",
+      "cuisine": "Italian",
+      "category": "Dinner",
+      "difficulty": "Medium",
+      "prepTime": 90,
+      "cookTime": 15,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "Pizza dough",
+          "quantity": "500g"
+        },
+        {
+          "name": "Tomato sauce",
+          "quantity": "1 cup"
+        },
+        {
+          "name": "Fresh mozzarella",
+          "quantity": "300g"
+        },
+        {
+          "name": "Fresh basil",
+          "quantity": "1 bunch"
+        },
+        {
+          "name": "Olive oil",
+          "quantity": "2 tbsp"
+        }
+      ],
+      "steps": [
+        "Let dough rise for 1 hour.",
+        "Roll out dough and spread tomato sauce.",
+        "Add torn mozzarella and drizzle with olive oil.",
+        "Bake at 475°F for 12-15 minutes, top with fresh basil."
+      ],
+      "createdBy": "u_demo",
+      "createdAt": "2024-05-20T19:00:00.000Z"
+    },
+    {
+      "id": "r_tiramisu",
+      "title": "Classic Tiramisu",
+      "description": "Italian coffee-flavored dessert with mascarpone and ladyfingers.",
+      "imageUrl": "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=800&q=80",
+      "cuisine": "Italian",
+      "category": "Dessert",
+      "difficulty": "Medium",
+      "prepTime": 30,
+      "cookTime": 0,
+      "servings": 8,
+      "ingredients": [
+        {
+          "name": "Mascarpone cheese",
+          "quantity": "500g"
+        },
+        {
+          "name": "Ladyfinger cookies",
+          "quantity": "24"
+        },
+        {
+          "name": "Espresso coffee",
+          "quantity": "2 cups, cooled"
+        },
+        {
+          "name": "Eggs",
+          "quantity": "4, separated"
+        },
+        {
+          "name": "Sugar",
+          "quantity": "3/4 cup"
+        },
+        {
+          "name": "Cocoa powder",
+          "quantity": "For dusting"
+        }
+      ],
+      "steps": [
+        "Whisk egg yolks with sugar, fold in mascarpone.",
+        "Beat egg whites to stiff peaks, fold into mascarpone mixture.",
+        "Dip ladyfingers in espresso, layer in dish.",
+        "Alternate layers of cream and cookies, dust with cocoa. Chill 4 hours."
+      ],
+      "createdBy": "u_demo",
+      "createdAt": "2024-04-25T20:00:00.000Z"
+    },
+    {
+      "id": "r_avocado_toast",
+      "title": "Avocado Toast",
+      "description": "Healthy and trendy breakfast with smashed avocado on toast.",
+      "imageUrl": "https://images.unsplash.com/photo-1541519227354-08fa5d50c44d?w=800&q=80",
+      "cuisine": "American",
+      "category": "Breakfast",
+      "difficulty": "Easy",
+      "prepTime": 5,
+      "cookTime": 5,
+      "servings": 2,
+      "ingredients": [
+        {
+          "name": "Bread slices",
+          "quantity": "4, whole grain"
+        },
+        {
+          "name": "Avocados",
+          "quantity": "2 ripe"
+        },
+        {
+          "name": "Lemon juice",
+          "quantity": "1 tbsp"
+        },
+        {
+          "name": "Red pepper flakes",
+          "quantity": "To taste"
+        },
+        {
+          "name": "Cherry tomatoes",
+          "quantity": "Optional, halved"
+        }
+      ],
+      "steps": [
+        "Toast bread slices until golden.",
+        "Mash avocados with lemon juice, salt, and pepper.",
+        "Spread avocado mixture on toast.",
+        "Top with red pepper flakes and cherry tomatoes if desired."
+      ],
+      "createdBy": "u_demo",
+      "createdAt": "2024-05-30T07:30:00.000Z"
+    }
+  ],
+  "users": [
+    {
+      "id": "u_demo",
+      "name": "Demo User",
+      "email": "demo@cookbook.app",
+      "password": "demo123"
+    }
+  ],
+  "favorites": {
+    "u_demo": {
+      "r_1764960938492_zp4xtsx": true
+    }
+  }
+}

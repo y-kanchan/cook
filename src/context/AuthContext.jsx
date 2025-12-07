@@ -1,5 +1,6 @@
-import { createContext, useContext, useEffect, useMemo, useState } from "react";
-import { auth } from "../utils/fakeApi";
+import { createContext, useContext, useEffect, useMemo, useState } from 'react'
+import { auth } from '../utils/api'
+import { toast } from 'react-hot-toast'
 
 const AuthCtx = createContext(null);
 export function AuthProvider({ children }) {
@@ -53,3 +54,5 @@ export function ProtectedRoute({ children }) {
   if (!user) return null;
   return children;
 }
+export function useAuth() { return useContext(AuthCtx) }
+export function ProtectedRoute({ children }) { const { user } = useAuth(); if (!user) return null; return children }
