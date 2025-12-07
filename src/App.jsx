@@ -8,18 +8,39 @@ import Login from './pages/Login'
 import Register from './pages/Register'
 import AddRecipe from './pages/AddRecipe'
 import EditRecipe from './pages/EditRecipe'
-import MyCookbook from './pages/MyCookbook'
+import SavedRecipes from './pages/SavedRecipes'
 import MyRecipes from './pages/MyRecipes'
 import Profile from './pages/Profile'
 import { useAuth } from './context/AuthContext'
 
-function Protected({ children }){
-  const { user } = useAuth()
+function Protected({ children }) {
+  const { user, initializing } = useAuth()
+  
+  // Wait for auth to initialize before redirecting
+  if (initializing) {
+    return <div className="flex items-center justify-center py-20"><div className="h-8 w-8 animate-spin rounded-full border-4 border-gray-300 border-t-yellow-500" /></div>
+  }
+  
   if (!user) return <Navigate to="/login" replace />
   return children
 }
 
-export default function App(){
+export default function App() {
+  const { initializing } = useAuth()
+
+  // Show loader while initializing auth
+  if (initializing) {
+    return (
+      <div className="flex min-h-full flex-col">
+        <Navbar />
+        <main className="mx-auto w-full max-w-6xl flex-1 px-4 py-6 flex items-center justify-center">
+          <div className="h-8 w-8 animate-spin rounded-full border-4 border-gray-300 border-t-yellow-500" />
+        </main>
+        <Footer />
+      </div>
+    )
+  }
+
   return (
     <div className="flex min-h-full flex-col">
       <Navbar />
@@ -32,7 +53,7 @@ export default function App(){
           <Route path="/register" element={<Register />} />
           <Route path="/add" element={<Protected><AddRecipe /></Protected>} />
           <Route path="/edit/:id" element={<Protected><EditRecipe /></Protected>} />
-          <Route path="/my-cookbook" element={<Protected><MyCookbook /></Protected>} />
+          <Route path="/my-cookbook" element={<Protected><SavedRecipes /></Protected>} />
           <Route path="/my-recipes" element={<Protected><MyRecipes /></Protected>} />
           <Route path="/profile" element={<Protected><Profile /></Protected>} />
           <Route path="*" element={<Navigate to="/" replace />} />

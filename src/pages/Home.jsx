@@ -1,8 +1,10 @@
-import { useMemo, useRef, useState, useEffect } from 'react'  // React hooks for state and animation
-import { Link } from 'react-router-dom' // used to navigate other page
-import RecipeGrid from '../components/recipes/RecipeGrid' //custom multiple receipe cards in a grid layout
-import { useRecipes } from '../context/RecipesContext' //custom hooks from my Recipes context
+import { useMemo, useRef, useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
+import RecipeGrid from '../components/recipes/RecipeGrid'
+import { useRecipes } from '../context/RecipesContext'
+import { mealdb } from '../utils/api'
 import Intro from '../components/Intro'
+import Loader from '../components/ui/Loader'
 
 function ArcCarousel(){ // draw the animated circular food image 
   const images = useMemo(() => [ // wrap - array is created only once and not on every render
@@ -12,38 +14,38 @@ function ArcCarousel(){ // draw the animated circular food image
     { src: 'https://images.unsplash.com/photo-1481931098730-318b6f776db0', alt: 'Dessert' },
     { src: 'https://images.unsplash.com/photo-1490645935967-10de6ba17061', alt: 'Salmon' },
   ], [])
-  const [offset, setOffset] = useState(0) // num controlling the position of images along the curve
-  const [current] = useState(2) // represent middle image
-  const containerRef = useRef(null)//holds a reference to other div of the carousel
-  const [paused, setPaused] = useState(false) // track whether the animation should stop when the user hovers over thecarousel
+  const [offset, setOffset] = useState(0)
+  const [current] = useState(2)
+  const containerRef = useRef(null)
+  const [paused, setPaused] = useState(false)
 
-  useEffect(() => { // create continuous animation 
-    let raf, last = performance.now() //current time 
+  useEffect(() => {
+    let raf, last = performance.now()
     const loop = (t) => {
       const dt = t - last; last = t
-      if (!paused) setOffset(o => (o + dt * 0.00022) % 1) // time difference 
-      raf = requestAnimationFrame(loop) // calling the loop function again and again for smooth animation
+      if (!paused) setOffset(o => (o + dt * 0.00022) % 1)
+      raf = requestAnimationFrame(loop)
     }
     raf = requestAnimationFrame(loop)
     return () => cancelAnimationFrame(raf)
   }, [paused])
 
-  const w = 560 //width
-  const h = 360 //height
-  const r = 220 //radius
-  const cx = w/2  // central coordinates
-  const cy = h/2 + 40 // central coordinates
-  const arcPath = `M ${cx-r} ${cy} A ${r} ${r} 0 0 0 ${cx+r} ${cy}` // draws a curved arc
+  const w = 560
+  const h = 360
+  const r = 220
+  const cx = w/2
+  const cy = h/2 + 40
+  const arcPath = `M ${cx-r} ${cy} A ${r} ${r} 0 0 0 ${cx+r} ${cy}`
 
   const thumbPositions = images.map((img, i) => {
-    const t = ((i / images.length) + offset) % 1  // normalized position between 0 & 1
-    const ang = Math.PI + (0 - Math.PI) * t  // angle betw pie and 0
+    const t = ((i / images.length) + offset) % 1
+    const ang = Math.PI + (0 - Math.PI) * t
     const x = cx + Math.cos(ang) * r
     const y = cy - Math.sin(ang) * r
     return { img, x, y }
   })
 
-  function nudge(delta){ // changes the offset manually when we click next or previous buttons
+  function nudge(delta){
     setOffset(o => (o + delta + 1) % 1)
   }
 
@@ -73,17 +75,16 @@ function ArcCarousel(){ // draw the animated circular food image
         </div>
       </div>
 
-      {/* Arrow controls */}
       <button
         aria-label="Previous"
-        onClick={()=>nudge(-0.06)} // move image in 1 direction
+        onClick={()=>nudge(-0.06)}
         className="absolute -bottom-4 left-8 grid h-10 w-10 place-items-center rounded-full bg-yellow-400 text-white shadow hover:bg-yellow-500"
       >
         <span className="-rotate-180 text-xl">➜</span>
       </button>
       <button
         aria-label="Next"
-        onClick={()=>nudge(0.06)} // move image in opposite direction
+        onClick={()=>nudge(0.06)}
         className="absolute -bottom-4 right-8 grid h-10 w-10 place-items-center rounded-full bg-yellow-400 text-white shadow hover:bg-yellow-500"
       >
         <span className="text-xl">➜</span>
@@ -93,16 +94,13 @@ function ArcCarousel(){ // draw the animated circular food image
 }
 
 export default function Home(){
-  const tabs = ['Breakfast','Lunch','Dinner']
-  const [tab, setTab] = useState('Breakfast')
   const [showIntro, setShowIntro] = useState(() => {
     try { return !sessionStorage.getItem('introSeen') } catch { return true }
   })
   return (
     <div className="relative overflow-hidden">
       {showIntro && <Intro onFinish={() => { try { sessionStorage.setItem('introSeen','1') } catch {} ; setShowIntro(false) }} />}
-      {/* Curved yellow backdrop */}
-      <div className="pointer-events-none absolute inset-x-0 -top-32 h-[380px] rounded-b-[55%] bg-yellow-300/80 sm:-top-36 sm:h-[440px] md:-top-40 md:h-[500px]"></div>  // create a curved yellow shape at the top // used rounded-b-[55%] to create a smooth curve
+      <div className="pointer-events-none absolute inset-x-0 -top-32 h-[380px] rounded-b-[55%] bg-yellow-300/80 sm:-top-36 sm:h-[440px] md:-top-40 md:h-[500px]"></div>
       <main className="relative z-10 mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-10 px-4 pb-20 pt-16 md:grid-cols-2 md:pb-28 md:pt-24">
         <section className="order-2 md:order-1">
           <h1 className="text-5xl font-extrabold leading-tight text-yellow-500 md:text-6xl">Delicious</h1>
@@ -122,8 +120,11 @@ export default function Home(){
         </section>
       </main>
 
-      {/* Featured recipes section to merge landing with app */}
+      {/* Popular Recipes from Database */}
       <FeaturedRecipes />
+      
+      {/* MealDB Recipes Section */}
+      <MealDBRecipes />
     </div>
   )
 }
@@ -137,7 +138,42 @@ function FeaturedRecipes(){
         <h3 className="text-lg font-semibold text-gray-800">Popular Recipes</h3>
         <Link to="/recipes" className="text-sm font-medium text-yellow-600 hover:text-yellow-700">View all</Link>
       </div>
-      <RecipeGrid items={top} />
+      {loading ? <Loader /> : <RecipeGrid items={top} />}
+    </section>
+  )
+}
+
+function MealDBRecipes(){
+  const [meals, setMeals] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(null)
+
+  useEffect(() => {
+    const fetchMeals = async () => {
+      try {
+        setLoading(true)
+        setError(null)
+        const randomMeals = await mealdb.getRandomMeals(3)
+        setMeals(randomMeals)
+      } catch (err) {
+        console.error('Failed to fetch meals:', err)
+        setError('Failed to load meals from MealDB')
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    fetchMeals()
+  }, [])
+
+  return (
+    <section className="mx-auto mb-12 w-full max-w-6xl px-4 md:mb-20">
+      <div className="mb-4 flex items-center justify-between">
+        <h3 className="text-lg font-semibold text-gray-800">Explore More Recipes</h3>
+        <Link to="/recipes" className="text-sm font-medium text-yellow-600 hover:text-yellow-700">View all</Link>
+      </div>
+      {error && <div className="mb-4 rounded-lg bg-red-50 p-4 text-sm text-red-700">{error}</div>}
+      {loading ? <Loader /> : <RecipeGrid items={meals} />}
     </section>
   )
 }

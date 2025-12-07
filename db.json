@@ -613,6 +613,29 @@
       ],
       "createdBy": "u_demo",
       "createdAt": "2024-05-30T07:30:00.000Z"
+    },
+    {
+      "title": "pasta",
+      "description": "delicious",
+      "imageUrl": "https://cdn.loveandlemons.com/wp-content/uploads/2025/07/pesto-pasta.jpg",
+      "cuisine": "Italian",
+      "category": "Lunch",
+      "difficulty": "Easy",
+      "prepTime": 0,
+      "cookTime": 0,
+      "servings": 1,
+      "ingredients": [
+        {
+          "name": "pasta",
+          "quantity": "500gm"
+        }
+      ],
+      "steps": [
+        "boil pasta"
+      ],
+      "id": "r_1765110601666_vto7be3",
+      "createdBy": "u_demo",
+      "createdAt": "2025-12-07T12:30:01.666Z"
     }
   ],
   "users": [
@@ -621,11 +644,27 @@
       "name": "Demo User",
       "email": "demo@cookbook.app",
       "password": "demo123"
+    },
+    {
+      "id": "u_1765112040289_39w1kwy",
+      "name": "Riju",
+      "email": "priju@gmail.com",
+      "password": "priju123"
     }
   ],
   "favorites": {
     "u_demo": {
-      "r_1764960938492_zp4xtsx": true
+      "r_1764960938492_zp4xtsx": true,
+      "r_pancakes": true,
+      "meal_52813": true,
+      "meal_53206": true,
+      "meal_53138": true,
+      "meal_53076": true
+    },
+    "u_1765112040289_39w1kwy": {
+      "meal_52944": true,
+      "meal_52896": true,
+      "meal_52765": true
     }
   }
 }
