@@ -33,6 +33,7 @@ export default function RecipeFilters({
         <option value="">Any Difficulty</option>
         {difficulties.map(c => <option key={c} value={c}>{c}</option>)}
       </Select>
-    </div>
+    </div> 
   )
 }
+ 

@@ -15,7 +15,7 @@ export default function Navbar(){
               <NavLink to="/my-cookbook" className={({isActive})=> isActive? 'text-primary-700 font-medium' : 'text-gray-600'}>Saved</NavLink>
               <NavLink to="/add" className={({isActive})=> isActive? 'text-primary-700 font-medium' : 'text-gray-600'}>Add Recipe</NavLink>
             </>
-          )}
+          )} 
         </nav>
         <div className="flex items-center gap-3">
           {user ? (
@@ -34,3 +34,4 @@ export default function Navbar(){
     </header>
   )
 }
+ 

@@ -10,12 +10,12 @@ export default function RecipeCard({ recipe, showRemove = false, onRemove = null
   const { user } = useAuth()
   const [isAlreadySaved, setIsAlreadySaved] = useState(false)
   const [checking, setChecking] = useState(false)
-
-  useEffect(() => {
+ 
+ useEffect(() => {
     if (!user || showRemove) {
       setIsAlreadySaved(false)
       return
-    }
+    } 
     let mounted = true
     const check = async () => {
       try {

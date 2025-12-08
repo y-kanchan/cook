@@ -4,4 +4,4 @@ export default function Footer(){
       <div className="mx-auto max-w-6xl px-4">© {new Date().getFullYear()} CookBook · Your Virtual Kitchen Assistant</div>
     </footer>
   )
-}
+} 

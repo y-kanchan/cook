@@ -3,7 +3,7 @@ import Input from '../components/ui/Input'
 import Button from '../components/ui/Button'
 import { useAuth } from '../context/AuthContext'
 import { useNavigate, Link } from 'react-router-dom'
-
+ 
 export default function Login(){
   const { login, loading } = useAuth()
   const nav = useNavigate()

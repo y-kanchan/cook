@@ -84,12 +84,12 @@ export default function EditRecipe() {
             value={form.imageUrl}
             onChange={handleImageUrlChange}
             required
-          />
+          /> 
           {(imageError || imageLoadError) && (
             <p className="mt-1 text-sm text-red-600">
               {imageError || 'Image failed to load. Please check the URL.'}
             </p>
-          )}
+          )} 
           {form.imageUrl && !imageError && !imageLoadError && (
             <div className="mt-2">
               <img

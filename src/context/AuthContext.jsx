@@ -1,13 +1,13 @@
 import { createContext, useContext, useEffect, useMemo, useState } from 'react'
 import { auth } from '../utils/api'
-
+ 
 
 const AuthCtx = createContext(null);
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null)
   const [loading, setLoading] = useState(false)
   const [initializing, setInitializing] = useState(true)
-
+ 
   // Initialize user from localStorage on mount
   useEffect(() => {
     try {

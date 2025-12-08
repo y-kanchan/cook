@@ -2,13 +2,13 @@ import { useEffect, useState } from 'react'
 import { useRecipes } from '../context/RecipesContext'
 import { useAuth } from '../context/AuthContext'
 import RecipeGrid from '../components/recipes/RecipeGrid'
-
+ 
 export default function MyRecipes(){
   const { myRecipes } = useRecipes()
   const { user } = useAuth()
   const [items, setItems] = useState([])
   const [loading, setLoading] = useState(false)
-
+ 
   useEffect(() => {
     if (!user) return
     setLoading(true)

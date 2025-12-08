@@ -10,7 +10,7 @@ export default function RecipeDetails() {
   const { id } = useParams()
   const navigate = useNavigate()
   const { user } = useAuth()
-  const { favorite, isFavorite } = useRecipes()
+  const { favorite, isFavorite, remove } = useRecipes()
   const [r, setR] = useState(null)
   const [loading, setLoading] = useState(true)
   const [deleting, setDeleting] = useState(false)
@@ -122,17 +122,17 @@ export default function RecipeDetails() {
     if (!window.confirm('Are you sure you want to delete this recipe? This action cannot be undone.')) return
     setDeleting(true)
     try {
-      await toast.promise(async () => {
-        // remove is provided by RecipesContext (removes from local json-server)
-        await (await import('../context/RecipesContext')).useRecipes().remove(r.id)
-      }, {
-        loading: 'Deleting...',
-        success: 'Recipe deleted',
-        error: 'Failed to delete recipe',
-      })
+      await toast.promise(
+        remove(r.id),
+        {
+          loading: 'Deleting...',
+          success: 'Recipe deleted',
+          error: 'Failed to delete recipe',
+        }
+      )
       navigate('/recipes')
     } catch (err) {
-      console.error(err)
+      console.error('Delete error:', err)
     } finally {
       setDeleting(false)
     }

@@ -49,8 +49,8 @@ export default function AddRecipe() {
     if (!step) return;
     setForm((f) => ({ ...f, steps: [...f.steps, step] }));
     setStep("");
-  }
-
+  } 
+ 
   function validateImageUrl(url) {
     if (!url) return "Image URL is required";
     try {

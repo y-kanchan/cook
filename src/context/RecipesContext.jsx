@@ -19,7 +19,7 @@ export function RecipesProvider({ children }) {
       setLoading(false)
     })
   }, [])
-
+  
   const value = useMemo(() => ({
     recipes, loading,
     refresh: async (filters) => { setLoading(true); const list = await api.listRecipes(filters); setRecipes(list); setLoading(false) },

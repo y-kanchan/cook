@@ -122,7 +122,7 @@ export default function Home(){
 
       {/* Popular Recipes from Database */}
       <FeaturedRecipes />
-      
+        
       {/* MealDB Recipes Section */}
       <MealDBRecipes />
     </div>

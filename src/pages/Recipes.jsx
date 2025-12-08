@@ -6,7 +6,7 @@ import { mealdb } from '../utils/api'
 import Loader from '../components/ui/Loader'
 
 const RECIPES_PER_PAGE = 24
-
+  
 export default function Recipes() {
   const { recipes: localRecipes, loading: localLoading, refresh } = useRecipes()
   const [allRecipes, setAllRecipes] = useState([])

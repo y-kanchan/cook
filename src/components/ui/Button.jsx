@@ -8,3 +8,4 @@ export default function Button({ className, children, variant='primary', ...prop
   }
   return <button className={clsx(base, variants[variant], className)} {...props}>{children}</button>
 }
+ 

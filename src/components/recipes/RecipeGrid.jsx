@@ -10,8 +10,9 @@ export default function RecipeGrid({ items, showRemove = false, onRemove = null 
           recipe={r}
           showRemove={showRemove}
           onRemove={onRemove}
-        />
+        /> 
       ))}
     </div>
   )
 }
+ 
