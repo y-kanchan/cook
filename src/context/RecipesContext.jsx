@@ -13,9 +13,13 @@ export function RecipesProvider({ children }) {
       const list = await api.listRecipes()
       setRecipes(list)
       setLoading(false)
+    }).catch(err => {
+      // if api.init fails, keep loading false so UI doesn't hang
+      console.error(err)
+      setLoading(false)
     })
   }, [])
-
+  
   const value = useMemo(() => ({
     recipes, loading,
     refresh: async (filters) => { setLoading(true); const list = await api.listRecipes(filters); setRecipes(list); setLoading(false) },
@@ -23,6 +27,7 @@ export function RecipesProvider({ children }) {
     update: async (id, data) => { const r = await api.updateRecipe(id, data); setRecipes(prev => prev.map(x => x.id === id ? r : x)); return r },
     remove: async (id) => { await api.deleteRecipe(id); setRecipes(prev => prev.filter(x => x.id !== id)) },
     myRecipes: async () => { if (!user) return []; return api.myRecipes(user.id) },
+    isFavorite: async (id) => { if (!user) return false; return api.isFavorite(user.id, id) },
     favorite: async (id) => { if (!user) return false; return api.toggleFavorite(user.id, id) },
     favorites: async () => { if (!user) return []; return api.listFavorites(user.id) },
   }), [recipes, loading, user])

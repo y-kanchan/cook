@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-
+ 
 export default function Intro({ onFinish = () => {} }) {
   const title = 'COOKBOOK'
   const [index, setIndex] = useState(0)

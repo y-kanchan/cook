@@ -621,11 +621,26 @@
       "name": "Demo User",
       "email": "demo@cookbook.app",
       "password": "demo123"
+    },
+    {
+      "id": "u_1765112040289_39w1kwy",
+      "name": "Riju",
+      "email": "priju@gmail.com",
+      "password": "priju123"
     }
   ],
   "favorites": {
     "u_demo": {
-      "r_1764960938492_zp4xtsx": true
+      "r_1764960938492_zp4xtsx": true,
+      "r_pancakes": true,
+      "meal_52813": true,
+      "meal_53206": true,
+      "r_pad_thai": true
+    },
+    "u_1765112040289_39w1kwy": {
+      "meal_52944": true,
+      "meal_52896": true,
+      "r_1765110601666_vto7be3": true
     }
   }
 }

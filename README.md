@@ -40,9 +40,9 @@ You can also register a new account, everything is saved in LocalStorage.
 - View detailed recipe page
 - Track user-created recipes
 
-### My Cookbook (Favorites)
+### Saved (Favorites)
 - Save/unsave recipes per user
-- Dedicated "My Cookbook" page
+- Dedicated saved recipes page
 
 ### Smart Filtering & Search
 - Search by title
@@ -83,7 +83,7 @@ src/
 │   ├── EditRecipe.jsx
 │   ├── Login.jsx
 │   ├── Register.jsx
-│   ├── MyCookbook.jsx
+│   ├── SavedRecipes.jsx
 │   ├── MyRecipes.jsx
 │   └── Profile.jsx
 │

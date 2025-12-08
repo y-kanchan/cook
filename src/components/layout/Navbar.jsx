@@ -12,9 +12,10 @@ export default function Navbar(){
           {user && (
             <>
               <NavLink to="/my-recipes" className={({isActive})=> isActive? 'text-primary-700 font-medium' : 'text-gray-600'}>My Recipes</NavLink>
+              <NavLink to="/my-cookbook" className={({isActive})=> isActive? 'text-primary-700 font-medium' : 'text-gray-600'}>Saved</NavLink>
               <NavLink to="/add" className={({isActive})=> isActive? 'text-primary-700 font-medium' : 'text-gray-600'}>Add Recipe</NavLink>
             </>
-          )}
+          )} 
         </nav>
         <div className="flex items-center gap-3">
           {user ? (
@@ -33,3 +34,4 @@ export default function Navbar(){
     </header>
   )
 }
+ 

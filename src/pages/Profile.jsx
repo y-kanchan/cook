@@ -2,7 +2,7 @@ import { useAuth } from '../context/AuthContext'
 
 export default function Profile() {
   const { user } = useAuth()
-
+ 
   if (!user) return null
   return (
     <div className="mx-auto max-w-md space-y-4">
