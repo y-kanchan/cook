@@ -13,7 +13,7 @@ It simulates a real full-stack app using **LocalStorage** and a custom **Fake AP
 
 Watch the project explanation + live demo here: 
 
-[Watch Full Video → [CookBook - Demo](https://drive.google.com/file/d/1nfgj2CfvSg8vuYLflhmvNsKMXQJqf958/view?usp=sharing) /
+[Watch Full Video → [CookBook - Demo Video](https://drive.google.com/file/d/1nfgj2CfvSg8vuYLflhmvNsKMXQJqf958/view?usp=sharing) /
                     [Code Walkthrough](https://drive.google.com/file/d/1NKXN4SYluBV5jCOG1R5wQqWdFFiEiHQm/view?usp=sharing)
 
 ---
@@ -143,14 +143,21 @@ cb_seeded     → Boolean flag to prevent re-seeding sample data
 
 ### Screenshots
 
-| Login & Register                                                                 | Home Page                                                                      |
-|----------------------------------------------------------------------------------|--------------------------------------------------------------------------------|
-| ![Login](https://github.com/user-attachments/assets/6879973d-965d-4357-aa62-768cd9eb15f8)<br>![Register](https://github.com/user-attachments/assets/f3f29732-eb8a-4237-abd2-101925940b27) | ![Home](https://github.com/user-attachments/assets/ab75ebb1-5e31-4774-bb97-a83250f65950)<br> ![Recipe Detail 1](https://github.com/user-attachments/assets/65692d0b-af14-4802-bfe7-5cf311270237) |
+| Intro Page | Home Page |
+|------------|-----------|
+| <img width="450" src="https://github.com/user-attachments/assets/6b098936-3cce-4dea-b361-816198513a70" /> | <img width="450" src="https://github.com/user-attachments/assets/70ee9d3e-c438-45ec-8dec-0cf5edf6e86a" /> |
 
-| Recipe Details                                                                                   | Add Recipe                                                                          |
-|--------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
-|<br>![Recipe Detail 2](https://github.com/user-attachments/assets/fa9df22d-1e12-422f-8c0a-d0b70c090399) | ![Add Recipe](https://github.com/user-attachments/assets/fd5913a8-2fa8-45d2-b602-7fe2e38d09f6) |
+| All Recipes | Saved Recipes |
+|-------------|---------------|
+| <img width="450" src="https://github.com/user-attachments/assets/14fe15de-c31d-4ae7-ac62-f04b3a6d39fe" /> | <img width="450" src="https://github.com/user-attachments/assets/7ab95d76-68f4-4bb9-951c-aa1494b9d42a" /> |
 
+| Edit Recipe | Add Recipe |
+|-------------|-------------|
+| <img width="450" src="https://github.com/user-attachments/assets/01103dc5-a750-4f3e-800b-af90b2ac1754" /> | <img width="450" src="https://github.com/user-attachments/assets/fd5913a8-2fa8-45d2-b602-7fe2e38d09f6" /> |
+
+| Login | Register |
+|-------|----------|
+| <img width="450" src="https://github.com/user-attachments/assets/2ed25057-5de1-4302-a427-59093a109d5e" /> | <img width="450" src="https://github.com/user-attachments/assets/f93792be-6836-42de-ada4-a0f0ed8cce62" /> |
 
 ### Future Enhancements
 
